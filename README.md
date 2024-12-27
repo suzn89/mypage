@@ -78,4 +78,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1. Storybook 설치, storybook라이브러리는 타입스크립트 4.9.x 대와 호환가능함
 $ npx storybook@latest init
 
+2. SCSS 사용을 위한 설치
+$ npm install sass
+
+3. styled-component 설치
+$ npm install styled-components
+
+4. 타입스크립트 버전 설치
+$ npm install --save-dev @types/styled-components
+
+5. global font - Pretendard install
+$ npm install pretendard
+
 

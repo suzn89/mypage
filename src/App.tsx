@@ -1,23 +1,18 @@
-import './App.css';
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainPage from './pages/Main/Main.view';
+import SubPage from './pages/Project/Project.view';
+import NotFoundPage from './pages/Error/Error.view';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage title="메인" />} />
+        <Route path="/project" element={<SubPage title="프로젝트" />} />
+        <Route path="*" element={<NotFoundPage title="오류" />} />
+      </Routes>
+    </Router>
   );
 }
 
